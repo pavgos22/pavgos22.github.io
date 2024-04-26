@@ -32,20 +32,18 @@ body {
    margin-right: auto;
    margin-left: auto; }
 
-h1 {
-   font-size: 20px;
-   color: red;
-}
-
 @media (min-width: 768px) {
    .container {
-     width: 750px; } }
+    width: 750px; } }
+
 @media (min-width: 992px) {
    .container {
-     width: 970px; } }
+    width: 970px; } }
+
 @media (min-width: 1200px) {
    .container {
-     width: 1170px; } }
+    width: 1170px; } }
+
 .kodilla-heading--main {
    margin: 20px auto;
    text-align: center;
@@ -60,6 +58,11 @@ h1 {
    border: 1px solid #ccc;
    border-bottom: none;
    margin: 0; }
+
+.datatable__row-section-wrapper {
+   display: flex;
+   flex-grow: 1;
+   justify-content: space-around; }
 
 .datatable__row:first-of-type {
    border-top-left-radius: 4px;
@@ -87,7 +90,8 @@ h1 {
 .datatable__row--editing .datatable__button {
    display: none; }
 
-.datatable__row--editing .datatable__button--editing {
+.datatable__row--editing .datatable__button--editing,
+.datatable__row--editing .datatable__button--card-creation {
    display: block; }
 
 .datatable__row--add input,
@@ -95,7 +99,7 @@ h1 {
    display: block; }
 
 .datatable__field-value {
-   margin-bottom: 0;
+  margin-bottom: 0;
    font-size: 14px; }
 
 .datatable__row-section {
@@ -104,7 +108,8 @@ h1 {
    padding: 10px;
    flex-grow: 1; }
 
-.datatable__row-section--button-section {
+.datatable__row-section--button-section,
+.datatable__row-section--trello-section {
    margin-left: auto;
    align-self: center;
    flex-shrink: 1;
@@ -139,6 +144,10 @@ h1 {
    line-height: 1.25;
    border-radius: 4px; }
 
+.datatable__select {
+   display: block;
+   margin-bottom: 10px; }
+
 .datatable__tasks-container:empty {
    position: relative; }
 
@@ -146,5 +155,4 @@ h1 {
    content: 'Currently, there are no tasks available.'; }
 
 .template {
-   display: none;
-}
+   display: none; }
